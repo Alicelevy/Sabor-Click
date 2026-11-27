@@ -1,0 +1,82 @@
+<main class="tela-autenticacao" id="tela-cadastro" hidden>
+
+    <section class="autenticacao-card">
+
+        <a href="#" class="voltar-home" id="btn-cadastro-home">
+            ← Voltar ao início
+        </a>
+
+        <div class="autenticacao-cabecalho">
+            <span class="marca-icone">S&C</span>
+            <h1>Crie sua conta</h1>
+            <p>Preencha os dados para começar.</p>
+        </div>
+
+        <form id="form-cadastro">
+
+            <div class="form-group">
+                <label for="cadastro-nome">Nome completo</label>
+                <input
+                    type="text"
+                    id="cadastro-nome"
+                    name="nome"
+                    maxlength="100"
+                    autocomplete="name"
+                    placeholder="Digite seu nome"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="cadastro-email">E-mail</label>
+                <input
+                    type="email"
+                    id="cadastro-email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="seuemail@exemplo.com"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="cadastro-senha">Senha</label>
+                <input
+                    type="password"
+                    id="cadastro-senha"
+                    name="senha"
+                    minlength="8"
+                    autocomplete="new-password"
+                    placeholder="Mínimo de 8 caracteres"
+                    required>
+                <small>Mínimo de 8 caracteres.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="cadastro-endereco">Endereço</label>
+                <input
+                    type="text"
+                    id="cadastro-endereco"
+                    name="endereco"
+                    maxlength="255"
+                    autocomplete="street-address"
+                    placeholder="Digite seu endereço">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-bloco">
+                Criar conta
+            </button>
+
+        </form>
+
+        <div class="autenticacao-rodape">
+            <p>Já tem uma conta?</p>
+
+            <button type="button"
+                    class="link-botao"
+                    id="btn-voltar-login">
+                Voltar para o login
+            </button>
+        </div>
+
+    </section>
+
+</main>
