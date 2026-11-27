@@ -1,0 +1,595 @@
+
+/* =========================================
+   SABOR & CLIC — ESTILO PRINCIPAL
+   ========================================= */
+
+:root {
+    --laranja: #e87527;
+    --laranja-escuro: #c85b17;
+    --marrom: #3d2b1f;
+    --marrom-claro: #674832;
+    --creme: #fff7ed;
+    --branco: #ffffff;
+    --cinza: #756c65;
+    --borda: #eadfd4;
+    --fundo: #faf8f5;
+    --sombra: 0 8px 28px rgba(61, 43, 31, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--marrom);
+    line-height: 1.6;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.topo {
+    width: 100%;
+    min-height: 76px;
+    padding: 14px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--branco);
+    border-bottom: 1px solid var(--borda);
+    position: relative;
+    z-index: 10;
+}
+
+.marca {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--marrom);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.marca strong {
+    color: var(--laranja);
+}
+
+.marca-icone {
+    width: 43px;
+    height: 43px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--laranja);
+    color: var(--branco);
+    font-size: 15px;
+    font-weight: 800;
+    border-radius: 9px;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+.btn {
+    min-height: 44px;
+    padding: 11px 22px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.btn-primary {
+    color: var(--branco);
+    background: var(--laranja);
+}
+
+.btn-primary:hover {
+    background: var(--laranja-escuro);
+}
+
+.btn-secundario {
+    color: var(--marrom);
+    background: var(--branco);
+    border-color: var(--borda);
+}
+
+.btn-secundario:hover {
+    border-color: var(--laranja);
+    color: var(--laranja-escuro);
+}
+
+.btn-sair {
+    background: var(--creme);
+    color: var(--marrom);
+    border-color: var(--borda);
+}
+
+.btn-bloco {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.link-botao {
+    border: 0;
+    background: transparent;
+    color: var(--laranja-escuro);
+    font-weight: 700;
+}
+
+.link-botao:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   HOME
+   ========================================= */
+
+.tela-home {
+    background: var(--branco);
+}
+
+.home-hero {
+    min-height: 510px;
+    padding: 75px 9%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+    background: var(--creme);
+}
+
+.home-texto {
+    max-width: 590px;
+}
+
+.etiqueta-home {
+    display: inline-block;
+    margin-bottom: 17px;
+    color: var(--laranja-escuro);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.home-texto h1 {
+    margin-bottom: 22px;
+    font-size: clamp(36px, 5vw, 57px);
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.home-texto h1 span {
+    color: var(--laranja);
+}
+
+.home-texto p {
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: var(--cinza);
+    font-size: 17px;
+}
+
+.home-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.home-imagem {
+    min-height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-imagem-fundo {
+    width: 100%;
+    max-width: 440px;
+    min-height: 310px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--marrom);
+    color: var(--branco);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.home-imagem-selo {
+    color: #ffd4ae;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.home-prato {
+    margin: 18px 0;
+    font-size: 105px;
+}
+
+.home-imagem-fundo p {
+    color: #f7e9dd;
+}
+
+/* =========================================
+   RECURSOS DA HOME
+   ========================================= */
+
+.home-recursos {
+    padding: 75px 9%;
+}
+
+.secao-titulo {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.secao-titulo h2 {
+    margin-bottom: 10px;
+    font-size: 34px;
+}
+
+.secao-titulo p {
+    color: var(--cinza);
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.recurso {
+    padding: 25px 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    transition: 0.2s ease;
+}
+
+.recurso:hover {
+    border-color: var(--laranja);
+    transform: translateY(-3px);
+}
+
+.recurso-icone {
+    display: block;
+    margin-bottom: 17px;
+    font-size: 30px;
+}
+
+.recurso h3 {
+    margin-bottom: 9px;
+    font-size: 18px;
+}
+
+.recurso p {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* =========================================
+   RODAPÉ
+   ========================================= */
+
+.rodape {
+    padding: 35px 9%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    background: var(--marrom);
+    color: var(--branco);
+}
+
+.rodape .marca {
+    color: var(--branco);
+}
+
+.rodape p,
+.rodape small {
+    color: #e6d6ca;
+}
+
+/* =========================================
+   LOGIN E CADASTRO
+   ========================================= */
+
+.tela-autenticacao {
+    min-height: calc(100vh - 76px);
+    padding: 45px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--creme);
+}
+
+.autenticacao-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 35px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.voltar-home {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: var(--laranja-escuro);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.autenticacao-cabecalho {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.autenticacao-cabecalho .marca-icone {
+    margin-bottom: 16px;
+}
+
+.autenticacao-cabecalho h1 {
+    margin-bottom: 7px;
+    font-size: 27px;
+}
+
+.autenticacao-cabecalho p {
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    outline: none;
+    background: var(--branco);
+    color: var(--marrom);
+}
+
+.form-group input:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 3px rgba(232, 117, 39, 0.12);
+}
+
+.form-group small {
+    display: block;
+    margin-top: 5px;
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+.autenticacao-rodape {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borda);
+    text-align: center;
+}
+
+.autenticacao-rodape p {
+    margin-bottom: 7px;
+    color: var(--cinza);
+    font-size: 14px;
+}
+
+/* =========================================
+   PAINEL DO SISTEMA
+   ========================================= */
+
+.layout {
+    min-height: calc(100vh - 76px);
+    display: flex;
+}
+
+.menu-lateral {
+    width: 245px;
+    flex-shrink: 0;
+    padding: 25px 17px;
+    background: var(--marrom);
+    color: var(--branco);
+}
+
+.marca-painel {
+    margin-bottom: 38px;
+    color: var(--branco);
+}
+
+.menu-legenda {
+    display: block;
+    margin: 0 12px 13px;
+    color: #cbb9aa;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.navegacao-painel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.navegacao-painel a {
+    padding: 12px 13px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #f3e8df;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.navegacao-painel a span {
+    width: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.navegacao-painel a:hover,
+.navegacao-painel a.ativo {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+.conteudo {
+    min-width: 0;
+    flex: 1;
+    padding: 30px;
+    background: var(--fundo);
+}
+
+/* =========================================
+   CARREGAMENTO E NOTIFICAÇÕES
+   ========================================= */
+
+.indicador-carregando {
+    padding: 12px;
+    background: var(--creme);
+    color: var(--marrom);
+    text-align: center;
+}
+
+.notificacoes {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 100;
+    max-width: 350px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 950px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 55px 7%;
+    }
+
+    .home-texto {
+        max-width: 100%;
+    }
+
+    .recursos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .topo {
+        padding: 12px 5%;
+    }
+
+    .home-hero {
+        padding: 45px 6%;
+    }
+
+    .home-texto h1 {
+        font-size: 38px;
+    }
+
+    .home-acoes {
+        flex-direction: column;
+    }
+
+    .home-acoes .btn {
+        width: 100%;
+    }
+
+    .home-imagem-fundo {
+        min-height: 250px;
+    }
+
+    .home-recursos {
+        padding: 50px 6%;
+    }
+
+    .recursos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 6%;
+    }
+
+    .autenticacao-card {
+        padding: 25px 20px;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+    }
+
+    .navegacao-painel {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo {
+        padding: 18px;
+    }
+}

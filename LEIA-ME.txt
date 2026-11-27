@@ -1,0 +1,63 @@
+PROJETO INTEGRADOR SABOR & CLIC - PARTE 2 (BANCO DE DADOS)
+===============================================================
+
+ARQUIVOS
+--------
+01_modelo_fisico.sql
+    Cria o banco sabor_clic e suas tabelas, chaves e restricoes.
+    O campo usuarios.endereco e VARBINARY para armazenar o resultado AES.
+
+02_insercoes_basicas.sql
+    Insere os dados iniciais. O endereco de exemplo da cliente Ana e
+    criptografado com AES_ENCRYPT(). As senhas sao placeholders de teste.
+
+20_triggers.sql
+    Cria as triggers de validacao, baixa, ajuste e reposicao de estoque.
+
+11_queries_relatorios.sql
+    Contem consultas de relatorios e exemplos de AES_DECRYPT() e HEX().
+
+03_teste_triggers.sql
+    Arquivo opcional para criar um pedido de demonstracao e verificar
+    a baixa automatica do estoque.
+
+ORDEM DE EXECUCAO NO MYSQL WORKBENCH
+------------------------------------
+1. Execute 01_modelo_fisico.sql.
+2. Execute 02_insercoes_basicas.sql.
+3. Execute 20_triggers.sql.
+4. Execute 03_teste_triggers.sql (opcional).
+5. Execute 11_queries_relatorios.sql.
+
+SEGURANCA COM AES
+-----------------
+- AES_ENCRYPT(texto, chave) criptografa o endereco antes de armazenar.
+- AES_DECRYPT(dado, chave) recupera o endereco em uma consulta autorizada.
+- HEX(endereco) permite visualizar o valor binario criptografado em formato
+  hexadecimal.
+- A mesma chave precisa ser usada na criptografia e na descriptografia.
+- A chave 'CHAVE_DEMO_TROCAR_2026' e APENAS didatica. Troque-a para testar
+  e nunca use uma chave fixa escrita no codigo em um sistema real.
+- Em producao, a chave deve ser protegida e armazenada separadamente dos
+  dados criptografados, por exemplo em um gerenciador de segredos.
+- Senhas nao devem usar AES_DECRYPT(): devem ser armazenadas com hash seguro
+  de senha (por exemplo, Argon2id ou bcrypt) no backend.
+
+ATENCAO
+-------
+- Projeto escrito para MySQL 8.0.16 ou superior.
+- O arquivo 01_modelo_fisico.sql apaga e recria o banco sabor_clic.
+  Executa-lo novamente apaga os dados existentes desse banco.
+- Os scripts sao exemplos academicos e ainda precisam ser executados e
+  testados no MySQL Workbench do ambiente do aluno.
+- O uso de uma chave fixa em script serve apenas para demonstracao em aula,
+  nao representa uma configuracao segura para producao.
+
+ENTREGAVEIS OBRIGATORIOS DO APENDICE A
+--------------------------------------
+01_modelo_fisico.sql
+02_insercoes_basicas.sql
+11_queries_relatorios.sql
+20_triggers.sql
+
+O arquivo 03_teste_triggers.sql e adicional e serve para demonstracao.

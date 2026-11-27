@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block titulo %}Sabor & Clic | Gestão para restaurantes{% endblock %}
+
+{% block conteudo %}
+
+<header class="topo" id="topo">
+    <a href="#" class="marca" aria-label="Sabor & Clic - Início">
+        <span class="marca-icone">S&C</span>
+        <span>Sabor <strong>& Clic</strong></span>
+    </a>
+
+    <div class="usuario" id="area-usuario" hidden>
+        <span id="nome-usuario"></span>
+        <button type="button" class="btn btn-sair" id="btn-sair">
+            Sair
+        </button>
+    </div>
+</header>
+
+<div class="indicador-carregando"
+     id="indicador-carregando"
+     role="status"
+     hidden>
+    Carregando...
+</div>
+
+<div class="notificacoes" id="notificacoes" aria-live="polite"></div>
+
+{% include "components/home.html" %}
+{% include "components/login.html" %}
+{% include "components/cadastro.html" %}
+{% include "components/painel.html" %}
+
+{% endblock %}
